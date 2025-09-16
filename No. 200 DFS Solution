@@ -4,7 +4,7 @@ class Solution(object):
            return 0
     
         m, n = len(grid), len(grid[0])
-        visited = set()
+        visited = set() #也可以在dfs（r，c）中将访问过的点的值变为‘0’，这样可以不用到集合
     
         def dfs(r, c):
             # If out of bounds or already visited or water, stop
