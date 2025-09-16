@@ -11,7 +11,7 @@ class Solution(object):
         
         def dfs(r,c):
             if (r<0 or r>=m or c<0 or c>=n or grid[r][c] == 0 or (r,c) in visited_point):
-                return 0
+                return 0 #这里要返回0而不是空值，因为此时相当于这一块对于已经找打的area的扩大为0
             visited_point.add((r,c))
             area = 1
             area += dfs(r-1, c)
